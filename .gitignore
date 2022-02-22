@@ -3,3 +3,5 @@ node_modules/
 **/*.js
 **/*.js.map
 !build/build.js
+02_Lapiseira/sketch/novo.ts
+02_Lapiseira/sketch/person.ts
