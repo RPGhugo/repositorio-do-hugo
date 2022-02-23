@@ -27,6 +27,7 @@ class Grafite{      // preciso ter a classe grafite, pra ter a classe lapiseira
   toString(): string {
    return `Grafite ${this.calibre}: ${this.dureza}: ${this.tamanho}`;
   }
+}
 
 
     // agregação
@@ -34,9 +35,9 @@ class Grafite{      // preciso ter a classe grafite, pra ter a classe lapiseira
       calibre: number;
       private grafite: Grafite | null;  // tipos diferentes
 
-    constructor(calibre: number) { // a lapiseira recebe o grafite
-    this.calibre = calibre;
-    this.grafite = null; // grafite começa com zero
+      constructor(calibre: number) { // a lapiseira recebe o grafite
+       this.calibre = calibre;
+       this.grafite = null; // grafite começa com zero
     }
 
   
@@ -84,10 +85,14 @@ class Grafite{      // preciso ter a classe grafite, pra ter a classe lapiseira
       console.log("Escrita parcial: " + realizado + " folhas");
       this.grafite.tamanho == 0;
     }
-  if (this.grafite.tamanho == 0){
-    this.grafite = null;
+      if (this.grafite.tamanho == 0){
+      this.grafite = null;
+      }
   }
 
-let pentel = new Lapiseira(0.5)
-pentel.setGrafite(new Grafite(0.5, "HB", 5));
-pentel.escrever(10);
+}
+
+
+  let pentel = new Lapiseira(0.5);
+  pentel.setGrafite(new Grafite(0.5, "HB", 5));
+  pentel.escrever(10);
