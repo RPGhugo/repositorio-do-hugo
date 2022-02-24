@@ -24,6 +24,7 @@ class Pessoa {
     this.idade = idade; 
   }
 
+
   toString(): string {
     return `${this.nome} tem ${this.idade} anos`;
   }
@@ -56,10 +57,10 @@ class Motoca {
       }
        if (this.tempo < tempo){
          console.log("tempo insuficiente");
-         return false
+         return false;
        }
-        else
         this.tempo -= tempo;
+        console.log("Tempo insuficiente");
         return true;
     }
 
@@ -67,10 +68,10 @@ class Motoca {
 
     buzinar(): string {
       let saida = "P";
-      for (let i = 0; i < this.potencia; i++){
+      for (let i = 0; i < this.potencia; i++)
         saida += "e";
       return saida + "m";
-      }
+      
     }
 
     subirnaMotoca(pessoa: Pessoa): boolean {
@@ -98,7 +99,7 @@ class Motoca {
 
 let moto = new Motoca(10);
 console.log(moto.buzinar());
-moto.subirnaMotoca(new Pessoa("João", 1));
+moto.subirnaMotoca(new Pessoa("João", 10));
 moto.descerdaMotoca();
 
 
