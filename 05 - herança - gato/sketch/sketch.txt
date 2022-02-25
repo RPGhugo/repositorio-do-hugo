@@ -18,7 +18,7 @@ class Snake {
   vx: number;
   vy: number;
   constructor() {
-    this.body = new Cell(0, 0, color("green"));
+    this.body = new Cell(0, 0, color("red"));
     this.vx = 1;
     this.vy = 0;
   }

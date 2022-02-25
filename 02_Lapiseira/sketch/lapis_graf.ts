@@ -68,6 +68,15 @@ class Grafite{      // preciso ter a classe grafite, pra ter a classe lapiseira
    return grafite;
   } 
 
+  luzGrafite(): void {
+    if(this.grafite != null){
+      console.log("Laser azul");
+    }
+    else(this.grafite === null) 
+      console.log("Insira um grafite e tente novamente");
+    
+
+  }
 
   escrever(folhas: number): boolean {
     if (this.grafite == null){
@@ -76,7 +85,7 @@ class Grafite{      // preciso ter a classe grafite, pra ter a classe lapiseira
   }
   
     let gasto = this.grafite.gastoPorFolha() * folhas;
-    if(gasto <= this.grafite.tamanho){ // se o gasto for menor que o tamanho, grafite escreve
+    if(gasto <= this.grafite.tamanho){ // se o gasto for menor ou igual que o tamanho, grafite escreve
       console.log("Escrita concluída");
       this.grafite.tamanho -= gasto;
    
@@ -85,7 +94,7 @@ class Grafite{      // preciso ter a classe grafite, pra ter a classe lapiseira
       console.log("Escrita parcial: " + realizado + " folhas");
       this.grafite.tamanho == 0;
     }
-      if (this.grafite.tamanho == 0){
+      if (this.grafite.tamanho == 0){ // grafite de tamanho zerado = null
       this.grafite = null;
       }
   }
@@ -94,5 +103,11 @@ class Grafite{      // preciso ter a classe grafite, pra ter a classe lapiseira
 
 
   let pentel = new Lapiseira(0.5);
-  pentel.setGrafite(new Grafite(0.5, "HB", 5));
+  pentel.setGrafite(new Grafite(0.5, "HB", 40));
+  pentel.luzGrafite();
   pentel.escrever(10);
+  pentel.luzGrafite();
+  pentel.escrever(40);
+  pentel.luzGrafite();
+
+

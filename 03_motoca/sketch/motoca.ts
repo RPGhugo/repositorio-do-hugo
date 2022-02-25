@@ -60,7 +60,6 @@ class Motoca {
          return false;
        }
         this.tempo -= tempo;
-        console.log("Tempo insuficiente");
         return true;
     }
 
